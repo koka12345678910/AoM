@@ -1,0 +1,14 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bpwhjhfdt7qmx"]
+
+[sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_5ufnj"]
+resource_name = "Amplify"
+
+[sub_resource type="AudioEffectFilter" id="AudioEffectFilter_ubaaf"]
+resource_name = "Filter"
+
+[resource]
+bus/0/volume_db = -2.51026
+bus/0/effect/0/effect = SubResource("AudioEffectAmplify_5ufnj")
+bus/0/effect/0/enabled = false
+bus/0/effect/1/effect = SubResource("AudioEffectFilter_ubaaf")
+bus/0/effect/1/enabled = true

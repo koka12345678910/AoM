@@ -1,0 +1,411 @@
+[gd_scene load_steps=55 format=3 uid="uid://dx8xbp2lkteos"]
+
+[ext_resource type="Script" uid="uid://bgx6xuwqn6ley" path="res://Player/player.gd" id="1_ab8tj"]
+[ext_resource type="Texture2D" uid="uid://de44nux8osj1w" path="res://Player/serafim1.png" id="2_auvcm"]
+[ext_resource type="Texture2D" uid="uid://cstgbn0orujf" path="res://Player/serafim2.png" id="3_j6r3l"]
+[ext_resource type="Texture2D" uid="uid://3fm7fvrv5gc7" path="res://Menu/circle.png" id="4_aw8ul"]
+[ext_resource type="Texture2D" uid="uid://lqs7catiap8i" path="res://Player/serafim3.png" id="4_u3vyv"]
+[ext_resource type="Texture2D" uid="uid://d2el6qhgl0mlp" path="res://Player/serafim4.png" id="5_ro7ln"]
+[ext_resource type="Texture2D" uid="uid://bxrt8e6558kds" path="res://Player/serafim-mc/ser-run1.png" id="6_nunrm"]
+[ext_resource type="Texture2D" uid="uid://d3tsfxo4avlr5" path="res://Player/serafim-mc/ser-run2.png" id="7_fp6x5"]
+[ext_resource type="Texture2D" uid="uid://ek2uaewu4qq3" path="res://Player/serafim-mc/ser-run3.png" id="8_ot83f"]
+[ext_resource type="Texture2D" uid="uid://cjfsft5uj0elj" path="res://Player/serafim-mc/ser-run4.png" id="9_ml2jn"]
+[ext_resource type="Texture2D" uid="uid://cx1ile4m84ur" path="res://Player/serafim-mc/ser-run5.png" id="10_amh8e"]
+[ext_resource type="Texture2D" uid="uid://urhljvc687hf" path="res://Player/serafim-mc/ser-run6.png" id="11_di68d"]
+[ext_resource type="Texture2D" uid="uid://brv47arpfohfw" path="res://Player/serafim-mc/ser-run7.png" id="12_lxacd"]
+[ext_resource type="Texture2D" uid="uid://4q42cftqee14" path="res://Player/serafim-mc/ser-run8.png" id="13_f1so0"]
+[ext_resource type="Texture2D" uid="uid://6u2jt43q71q8" path="res://Player/serafim-mc/ser-run9.png" id="14_fed1h"]
+[ext_resource type="Texture2D" uid="uid://1q12vo7hybgr" path="res://Player/serafim-mc/ser-run10.png" id="15_idst8"]
+[ext_resource type="FontFile" uid="uid://sw7qdhg67g4v" path="res://tools/edf7f-eirik-raude.ttf" id="15_jcvp2"]
+[ext_resource type="Texture2D" uid="uid://sa3bkcb8mwhx" path="res://Player/serafim-mc/ser-walk-3.png" id="15_qt0bs"]
+[ext_resource type="Texture2D" uid="uid://c4hq45o64khcd" path="res://Player/serafim-mc/ser-walk-4.png" id="16_aiswy"]
+[ext_resource type="Texture2D" uid="uid://cbk7ae0t2ec" path="res://Player/serafim-mc/ser-run11.png" id="16_vd3so"]
+[ext_resource type="Texture2D" uid="uid://dnlbmm0px5t2k" path="res://Player/serafim-mc/ser-walk-5.png" id="17_i6dac"]
+[ext_resource type="Texture2D" uid="uid://bvof8qifx7otc" path="res://Player/serafim-mc/ser-run12.png" id="17_q3b41"]
+[ext_resource type="Texture2D" uid="uid://dm67q6a4xukl6" path="res://Player/serafim-mc/ser-walk-6.png" id="18_e5j4j"]
+[ext_resource type="Texture2D" uid="uid://c6rmifs6at410" path="res://Player/serafim-mc/ser-run13.png" id="18_mrkt8"]
+[ext_resource type="Texture2D" uid="uid://3tg2aqrc5uc2" path="res://Player/serafim-mc/ser-run14.png" id="19_3cn0d"]
+[ext_resource type="Texture2D" uid="uid://cbswmldn80dsr" path="res://Player/serafim-mc/ser-walk-7.png" id="19_t4hwg"]
+[ext_resource type="Texture2D" uid="uid://t4372qa5k6s8" path="res://Player/serafim-mc/ser-run15.png" id="20_ce58n"]
+[ext_resource type="Texture2D" uid="uid://ccwmby2mtp8sn" path="res://Player/serafim-mc/ser-walk-8.png" id="20_n5gsk"]
+[ext_resource type="Texture2D" uid="uid://dfeh0c2srebc" path="res://Player/serafim-mc/ser-walk-9.png" id="21_7j8gg"]
+[ext_resource type="Texture2D" uid="uid://bh4ug6ng46vjd" path="res://Player/serafim-mc/ser-run16.png" id="21_30sf5"]
+[ext_resource type="Texture2D" uid="uid://c00wsi2yleryw" path="res://Player/serafim-mc/ser-run17.png" id="22_0ng1q"]
+[ext_resource type="Texture2D" uid="uid://bcau1brikbwpi" path="res://Player/serafim-mc/ser-walk-10.png" id="22_n0y5y"]
+[ext_resource type="Texture2D" uid="uid://b33gnpt2n3aue" path="res://Player/serafim-mc/ser-run18.png" id="23_gsspr"]
+[ext_resource type="Texture2D" uid="uid://b7swanqcv3pgs" path="res://Player/serafim-mc/ser-run19.png" id="24_m3hfh"]
+[ext_resource type="Texture2D" uid="uid://0qp8wklgm2nc" path="res://Player/serafim-mc/ser-run20.png" id="25_6l7fx"]
+[ext_resource type="Texture2D" uid="uid://ceffco42pwrg4" path="res://Player/serafim-mc/ser-run21.png" id="26_5fu8g"]
+[ext_resource type="Texture2D" uid="uid://cc070iqoug7oo" path="res://Player/serafim-mc/ser-run22.png" id="27_b2uqa"]
+[ext_resource type="Texture2D" uid="uid://laocy7366d0i" path="res://Player/serafim-mc/ser-run23.png" id="28_v0irg"]
+[ext_resource type="Texture2D" uid="uid://dr7rya2117pk5" path="res://Player/serafim-mc/ser-run24.png" id="29_n2xb1"]
+[ext_resource type="Texture2D" uid="uid://8f76wqrc8t6b" path="res://Player/serafim-mc/ser-run25.png" id="30_8kwj2"]
+[ext_resource type="Texture2D" uid="uid://d15dwyminj2o3" path="res://Player/serafim-mc/ser-run26.png" id="31_8fr0s"]
+[ext_resource type="Texture2D" uid="uid://dtf40y36hi7dl" path="res://Player/serafim-mc/ser-run27.png" id="32_1m1pq"]
+[ext_resource type="Texture2D" uid="uid://d08tiyf28fde5" path="res://Player/serafim-mc/ser-run28.png" id="33_bkf7l"]
+[ext_resource type="Texture2D" uid="uid://dj1p14tyeks7s" path="res://Player/serafim-mc/ser-run29.png" id="34_6yvqy"]
+[ext_resource type="Texture2D" uid="uid://dpfjwvxhnfqod" path="res://Player/serafim-mc/ser-run30.png" id="35_ahtct"]
+[ext_resource type="Texture2D" uid="uid://by6p3m6yqip8h" path="res://Player/serafim-mc/ser-run31.png" id="36_wpa7t"]
+[ext_resource type="Texture2D" uid="uid://dfwt5nurx42bp" path="res://Player/serafim-mc/ser-run32.png" id="37_pnqmd"]
+[ext_resource type="Texture2D" uid="uid://cyh7rbauxgsdy" path="res://tools/cmw/StopMENU.png" id="47_l0mld"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mpdkr"]
+radius = 35.0
+height = 164.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qslb3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_auvcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j6r3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u3vyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ro7ln")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nunrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fp6x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ot83f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ml2jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_amh8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_di68d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lxacd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_f1so0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fed1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_idst8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vd3so")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_q3b41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mrkt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3cn0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ce58n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_30sf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0ng1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_gsspr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_m3hfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_6l7fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5fu8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_b2uqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_v0irg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_n2xb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_8kwj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8fr0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_1m1pq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_bkf7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_6yvqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ahtct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_wpa7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_pnqmd")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 40.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_qt0bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_aiswy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i6dac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_e5j4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t4hwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_n5gsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7j8gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_n0y5y")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_lwyds"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Idle"]
+}
+
+[sub_resource type="Animation" id="Animation_qy108"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.025, 0.05, 0.075, 0.1, 0.125, 0.15, 0.175, 0.2, 0.225, 0.25, 0.275, 0.3, 0.325, 0.35, 0.375, 0.4, 0.425, 0.45, 0.475, 0.5, 0.525, 0.55, 0.575, 0.6, 0.625, 0.65, 0.675, 0.7, 0.725, 0.75, 0.775),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Run"]
+}
+
+[sub_resource type="Animation" id="Animation_najhg"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Walk"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m3g6f"]
+_data = {
+&"Idle": SubResource("Animation_lwyds"),
+&"Run": SubResource("Animation_qy108"),
+&"Walk": SubResource("Animation_najhg")
+}
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_ab8tj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_mpdkr")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(15, -51)
+target_position = Vector2(214, 3)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, -11)
+scale = Vector2(0.652568, 0.563063)
+sprite_frames = SubResource("SpriteFrames_qslb3")
+animation = &"Run"
+autoplay = "Idle"
+frame = 6
+frame_progress = 0.633991
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 100
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_m3g6f")
+}
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-0.999985, 2)
+scale = Vector2(0.2475, 0.475)
+energy = 0.22
+blend_mode = 1
+texture = ExtResource("4_aw8ul")
+
+[node name="Walk_sound" type="AudioStreamPlayer2D" parent="."]
+volume_db = -1.874
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0.537255)
+offset_left = -26.0
+offset_top = -2.0
+offset_right = 580.0
+offset_bottom = 647.0
+texture = ExtResource("47_l0mld")
+
+[node name="Menu" type="Control" parent="CanvasLayer/TextureRect"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 99.0
+offset_top = 152.0
+offset_right = 539.0
+offset_bottom = 723.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/TextureRect/Menu"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_left = -19.0
+offset_top = -96.0
+offset_right = 383.0
+offset_bottom = 447.0
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect/Menu/Panel"]
+modulate = Color(0.694118, 0.694118, 0.694118, 1)
+layout_mode = 0
+offset_left = 165.0
+offset_top = 22.0
+offset_right = 242.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("15_jcvp2")
+theme_override_font_sizes/font_size = 40
+text = "Menu"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TextureRect/Menu/Panel"]
+modulate = Color(0.694118, 0.694118, 0.694118, 1)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 96.0
+offset_right = 387.0
+offset_bottom = 273.0
+theme_override_constants/separation = 15
+
+[node name="Resume" type="Button" parent="CanvasLayer/TextureRect/Menu/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("15_jcvp2")
+theme_override_font_sizes/font_size = 40
+text = "Resume"
+flat = true
+
+[node name="Settings" type="Button" parent="CanvasLayer/TextureRect/Menu/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("15_jcvp2")
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+flat = true
+
+[node name="Quit" type="Button" parent="CanvasLayer/TextureRect/Menu/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("15_jcvp2")
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/TextureRect/Menu/Panel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureRect/Menu/Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

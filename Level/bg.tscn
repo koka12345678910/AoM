@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dboryi8ne3a4"]
+
+[sub_resource type="GDScript" id="GDScript_snuv0"]
+script/source = "extends ParallaxBackground
+
+var speed = 50
+
+func _process(delta):
+	scroll_offset.x -= speed * delta
+"
+
+[sub_resource type="Resource" id="Resource_2tk4a"]
+metadata/__load_path__ = "res://Menu/back_prinse-Recovered (2).png"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_04pds"]
+
+[node name="BG" type="ParallaxBackground"]
+layer = -1
+follow_viewport_enabled = true
+script = SubResource("GDScript_snuv0")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(923, 338)
+scale = Vector2(3.6, 3.618)
+texture = SubResource("Resource_2tk4a")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(144, 493)
+texture = SubResource("CompressedTexture2D_04pds")

@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfoicpjpoldls"]
+
+[ext_resource type="Script" uid="uid://cx5ie7mof0d5l" path="res://Corridor_4.gd" id="1_cxg0x"]
+[ext_resource type="PackedScene" uid="uid://cw0x2lmx7vigb" path="res://Level/corridor/сorridor.tscn" id="2_mgbkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_syyy5"]
+radius = 187.182
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_na7w4"]
+radius = 148.216
+
+[node name="Corridor_4" type="Node2D"]
+script = ExtResource("1_cxg0x")
+
+[node name="Сorridor" parent="." instance=ExtResource("2_mgbkg")]
+
+[node name="CollisionShape2D" parent="Сorridor/Area2D" index="0"]
+position = Vector2(887, -474)
+
+[node name="CollisionShape2D" parent="Сorridor/Area2D2" index="0"]
+position = Vector2(2140, -465)
+
+[node name="Oldman" parent="Сorridor" index="10"]
+position = Vector2(2810, 819)
+
+[node name="CollisionShape2D" parent="Сorridor/Oldman" index="0"]
+position = Vector2(-8, 68)
+
+[node name="AnimatedSprite2D" parent="Сorridor/Oldman" index="1"]
+position = Vector2(-4, 68)
+
+[node name="Camera2D" parent="Сorridor/Oldman" index="2"]
+position = Vector2(-14, 7)
+
+[node name="PointLight2D" parent="Сorridor/Oldman" index="3"]
+position = Vector2(-11, 16)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-205, 886)
+shape = SubResource("CircleShape2D_syyy5")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(3115, 856)
+shape = SubResource("CircleShape2D_na7w4")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+
+[editable path="Сorridor"]
+[editable path="Сorridor/Oldman"]

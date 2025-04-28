@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6jw2lkufnrt5"]
+
+[ext_resource type="Script" uid="uid://b7jhegsnkh524" path="res://inventory/Inv_UI.gd" id="1_w2veq"]
+[ext_resource type="Texture2D" uid="uid://b7hig8w8j4kom" path="res://tools/cmw/inventar.png" id="2_hu28h"]
+[ext_resource type="PackedScene" uid="uid://vmofunyd41y0" path="res://inventory/inv_ui_slot.tscn" id="3_jpxyp"]
+
+[node name="Inv_UI" type="Control"]
+custom_minimum_size = Vector2(269, 218)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 269.0
+offset_bottom = 218.0
+script = ExtResource("1_w2veq")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_right = 269.0
+offset_bottom = 217.0
+texture = ExtResource("2_hu28h")
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 83.0
+offset_right = 234.0
+offset_bottom = 118.0
+columns = 5
+
+[node name="inv_UI_slot" parent="NinePatchRect/GridContainer" instance=ExtResource("3_jpxyp")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_jpxyp")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("3_jpxyp")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_jpxyp")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_jpxyp")]
+layout_mode = 2

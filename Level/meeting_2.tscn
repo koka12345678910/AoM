@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4d3tqjwxj6lp"]
+
+[ext_resource type="Script" uid="uid://cog0biaq51kc0" path="res://Meeting_2.gd" id="1_3vjj0"]
+[ext_resource type="PackedScene" uid="uid://dwwkq0m3ed6lt" path="res://Level/meeting.tscn" id="2_yivv2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_glpft"]
+radius = 158.455
+
+[node name="Meeting_2" type="Node2D"]
+script = ExtResource("1_3vjj0")
+
+[node name="Meeting" parent="." instance=ExtResource("2_yivv2")]
+
+[node name="DirectionalLight2D" parent="Meeting" index="6"]
+position = Vector2(4.00006, 3)
+
+[node name="Area2D2" parent="Meeting" index="7"]
+position = Vector2(1232, -125)
+
+[node name="CollisionShape2D" parent="Meeting/Area2D2" index="0"]
+position = Vector2(251, -882)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2078, 912)
+shape = SubResource("CircleShape2D_glpft")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+
+[editable path="Meeting"]

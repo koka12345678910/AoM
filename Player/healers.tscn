@@ -1,0 +1,77 @@
+[gd_scene load_steps=14 format=3 uid="uid://dtx6p2pewcml4"]
+
+[ext_resource type="Script" uid="uid://bfcc7uaahwr2g" path="res://Player/healers.gd" id="1_qrunc"]
+[ext_resource type="Texture2D" uid="uid://tk3avkmri1uj" path="res://Player/healers/healers/healers_idle/healers_idle1.png" id="1_r4upt"]
+[ext_resource type="Texture2D" uid="uid://3fm7fvrv5gc7" path="res://Menu/circle.png" id="2_akf3r"]
+[ext_resource type="Texture2D" uid="uid://dh6t8pxktnwta" path="res://Player/healers/healers/healers_idle/healers_idle2.png" id="2_sr2hv"]
+[ext_resource type="Texture2D" uid="uid://cwexxskjn0x8b" path="res://Player/healers/healers/healers_idle/healers_idle3.png" id="3_akn0l"]
+[ext_resource type="Texture2D" uid="uid://c0je0oqj2brfv" path="res://Player/healers/healers/healers_idle/healers_idle4.png" id="4_m7w8s"]
+[ext_resource type="Texture2D" uid="uid://dpmbpktudvbvh" path="res://Player/healers/healers/healers_idle/healers_idle5.png" id="5_ecaiu"]
+[ext_resource type="Texture2D" uid="uid://5das78gdpx42" path="res://Player/healers/healers/healers_walk/healers_walk1.png" id="6_sg7u2"]
+[ext_resource type="Texture2D" uid="uid://bh68r1mg667x2" path="res://Player/healers/healers/healers_walk/healers_walk2.png" id="7_7av8c"]
+[ext_resource type="Texture2D" uid="uid://dhnronlrcfsah" path="res://Player/healers/healers/healers_walk/healers_walk3.png" id="8_4nmm0"]
+[ext_resource type="Texture2D" uid="uid://b75hu3ucxgbiu" path="res://Player/healers/healers/healers_walk/healers_walk4.png" id="9_1g4ly"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ly4jg"]
+radius = 56.0
+height = 220.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pi31c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_r4upt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sr2hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_akn0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m7w8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ecaiu")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_sg7u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7av8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4nmm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1g4ly")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 4.0
+}]
+
+[node name="Healers" type="CharacterBody2D"]
+script = ExtResource("1_qrunc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ly4jg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(20, -13)
+scale = Vector2(0.529282, 0.481187)
+sprite_frames = SubResource("SpriteFrames_pi31c")
+animation = &"Walk"
+autoplay = "Idle"
+frame_progress = 0.296642
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-6, -31)
+scale = Vector2(0.395, 0.5275)
+energy = 0.7
+texture = ExtResource("2_akf3r")

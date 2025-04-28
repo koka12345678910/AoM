@@ -1,0 +1,166 @@
+[gd_scene load_steps=21 format=3 uid="uid://xuxjw3i52ra4"]
+
+[ext_resource type="Script" uid="uid://6qp7v2cbyjeu" path="res://Level/oldman.gd" id="1_nf5h8"]
+[ext_resource type="Texture2D" uid="uid://djub6iaskqqmy" path="res://dedok (2)/dedok (3)/dedok/dedok-walk/oldman1.png" id="8_dciqe"]
+[ext_resource type="Texture2D" uid="uid://dyi4xp2hemmri" path="res://dedok (2)/dedok (3)/dedok/dedok-walk/oldman2.png" id="9_ake12"]
+[ext_resource type="Texture2D" uid="uid://bmmc1jvmusfl3" path="res://dedok (2)/dedok (3)/dedok/dedok-idle/dedok1.png" id="9_wrifj"]
+[ext_resource type="Texture2D" uid="uid://cg48gqnr6nf6g" path="res://dedok (2)/dedok (3)/dedok/dedok-walk/oldman3.png" id="10_j8wji"]
+[ext_resource type="Texture2D" uid="uid://do1qthwl3ejw0" path="res://dedok (2)/dedok (3)/dedok/dedok-idle/dedok2.png" id="10_we337"]
+[ext_resource type="Texture2D" uid="uid://64aov47dqbwx" path="res://dedok (2)/dedok (3)/dedok/dedok-idle/dedok3.png" id="11_5io7w"]
+[ext_resource type="Texture2D" uid="uid://beeyx0reqhjhl" path="res://dedok (2)/dedok (3)/dedok/dedok-walk/oldman4.png" id="11_d85it"]
+[ext_resource type="Texture2D" uid="uid://df14u0r7qkyc2" path="res://dedok (2)/dedok (3)/dedok/dedok-walk/oldman5.png" id="12_2heo1"]
+[ext_resource type="Texture2D" uid="uid://xqnpdddcyn55" path="res://dedok (2)/dedok (3)/dedok/dedok-idle/dedok4.png" id="12_8mu23"]
+[ext_resource type="Texture2D" uid="uid://b4an56oui60uw" path="res://dedok (2)/dedok (3)/dedok/dedok-idle/dedok5.png" id="13_007i2"]
+[ext_resource type="Texture2D" uid="uid://bfmdymmi4pa7t" path="res://dedok (2)/dedok (3)/dedok/dedok-walk/oldman6.png" id="13_87h0a"]
+[ext_resource type="Texture2D" uid="uid://3fm7fvrv5gc7" path="res://Menu/circle.png" id="13_a1rfi"]
+[ext_resource type="Texture2D" uid="uid://lbcqsdm0u2k7" path="res://dedok (2)/dedok (3)/dedok/dedok-walk/oldman7.png" id="14_8i0sm"]
+[ext_resource type="Texture2D" uid="uid://h3rxq5tyxhfj" path="res://dedok (2)/dedok (3)/dedok/dedok-idle/dedok6.png" id="14_x1d5c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qnx7c"]
+radius = 41.0
+height = 214.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7xfrm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_wrifj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_we337")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5io7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8mu23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_007i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_x1d5c")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dciqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ake12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j8wji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d85it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2heo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_87h0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8i0sm")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 4.0
+}]
+
+[sub_resource type="Animation" id="Animation_6mwfi"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1, 1.33333, 1.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Idle"]
+}
+
+[sub_resource type="Animation" id="Animation_oi0tx"]
+length = 1.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Walk"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bayqv"]
+_data = {
+&"Idle": SubResource("Animation_6mwfi"),
+&"Walk": SubResource("Animation_oi0tx")
+}
+
+[node name="Oldman" type="CharacterBody2D"]
+script = ExtResource("1_nf5h8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_qnx7c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6, -4)
+scale = Vector2(0.78125, 0.761719)
+sprite_frames = SubResource("SpriteFrames_7xfrm")
+animation = &"Idle"
+autoplay = "Idle"
+flip_h = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 100
+position_smoothing_enabled = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(21, -28)
+scale = Vector2(0.265, 0.42125)
+texture = ExtResource("13_a1rfi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bayqv")
+}

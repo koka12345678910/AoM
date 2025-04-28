@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccie6h85bumk8"]
+
+[ext_resource type="Script" uid="uid://6boflbm7hm24" path="res://Level/meeting_3.gd" id="1_03u3m"]
+[ext_resource type="PackedScene" uid="uid://dwwkq0m3ed6lt" path="res://Level/meeting.tscn" id="1_le6ln"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7l1de"]
+radius = 147.221
+
+[node name="Meeting_3" type="Node2D"]
+script = ExtResource("1_03u3m")
+
+[node name="Meeting" parent="." instance=ExtResource("1_le6ln")]
+
+[node name="CollisionShape2D" parent="Meeting/Area2D" index="0"]
+position = Vector2(-228, 388)
+
+[node name="Area2D2" parent="Meeting" index="7"]
+position = Vector2(1138, -169)
+
+[node name="CollisionShape2D" parent="Meeting/Area2D2" index="0"]
+position = Vector2(144, -708)
+
+[node name="Oldman" parent="Meeting" index="9"]
+position = Vector2(1850, 876)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-192, 862)
+shape = SubResource("CircleShape2D_7l1de")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+
+[editable path="Meeting"]
+[editable path="Meeting/Oldman"]

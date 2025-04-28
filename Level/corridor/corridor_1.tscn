@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyc4ph5u7eotn"]
+
+[ext_resource type="PackedScene" uid="uid://cw0x2lmx7vigb" path="res://Level/corridor/сorridor.tscn" id="1_q6aau"]
+
+[node name="Corridor_1" type="Node2D"]
+
+[node name="Сorridor" parent="." instance=ExtResource("1_q6aau")]
+
+[node name="CollisionShape2D" parent="Сorridor/Area2D" index="0"]
+position = Vector2(-191, 844)
+
+[node name="Oldman" parent="Сorridor" index="10"]
+position = Vector2(2821, 675)
+
+[node name="CollisionShape2D" parent="Сorridor/Oldman" index="0"]
+position = Vector2(25, 218)
+
+[node name="AnimatedSprite2D" parent="Сorridor/Oldman" index="1"]
+position = Vector2(26, 214)
+
+[node name="PointLight2D" parent="Сorridor/Oldman" index="3"]
+position = Vector2(31, 181)
+
+[editable path="Сorridor"]
+[editable path="Сorridor/Oldman"]

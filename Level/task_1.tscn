@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtqcboa24ov44"]
+
+[ext_resource type="Script" uid="uid://becpf7kddeqar" path="res://Level/task_1.gd" id="1_nwv4d"]
+[ext_resource type="Texture2D" uid="uid://bauu2kkq7u46e" path="res://tools/prinse (1)/lever 1 - prinse back/bed.png" id="3_mxrs8"]
+[ext_resource type="Texture2D" uid="uid://3fm7fvrv5gc7" path="res://Menu/circle.png" id="3_tjwmy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hs3b2"]
+size = Vector2(406, 251)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qlaf"]
+size = Vector2(446.25, 269)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_nwv4d")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(296, 285)
+scale = Vector2(0.7975, 0.54)
+color = Color(0.717647, 0.6, 0.160784, 1)
+shadow_enabled = true
+texture = ExtResource("3_tjwmy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(282, 281.5)
+shape = SubResource("RectangleShape2D_hs3b2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(373.37, 282)
+scale = Vector2(1.15009, 0.854028)
+texture = ExtResource("3_mxrs8")
+
+[node name="Dialogue" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue"]
+position = Vector2(288.875, 278.5)
+shape = SubResource("RectangleShape2D_4qlaf")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 509.0
+offset_top = 57.0
+offset_right = 859.0
+offset_bottom = 159.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 9.0
+offset_right = 391.0
+offset_bottom = 77.0
+
+[node name="Label" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 371.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 18
+text = "Они пришли? Ей нужна помощь срочно!"

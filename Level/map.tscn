@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://bix0b5nrp5rus"]
+
+[ext_resource type="Texture2D" uid="uid://cjiotuk7pddi6" path="res://tools/cmw/maps.png" id="1_fonl0"]
+[ext_resource type="Script" uid="uid://cdbes7fig3tys" path="res://Level/map.gd" id="1_qc0nl"]
+[ext_resource type="Texture2D" uid="uid://bmanye0qjpila" path="res://tools/maps.png" id="2_wdvhr"]
+
+[node name="Map" type="CanvasLayer"]
+script = ExtResource("1_qc0nl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.701961)
+offset_left = 378.0
+offset_top = 141.0
+offset_right = 1543.0
+offset_bottom = 942.0
+texture = ExtResource("1_fonl0")
+
+[node name="Control" type="Control" parent="TextureRect"]
+modulate = Color(1, 1, 1, 0.694118)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1393.0
+offset_bottom = 784.0
+
+[node name="Panel" type="Panel" parent="TextureRect/Control"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 119.0
+offset_top = 69.0
+offset_right = 1256.0
+offset_bottom = 700.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect/Control/Panel"]
+position = Vector2(464.5, 325)
+scale = Vector2(0.151563, 0.102778)
+texture = ExtResource("2_wdvhr")
+
+[node name="Ironfields" type="Button" parent="TextureRect/Control/Panel"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 487.0
+offset_top = 78.0
+offset_right = 687.0
+offset_bottom = 227.0
+flat = true
+
+[node name="Southfields" type="Button" parent="TextureRect/Control/Panel"]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 403.0
+offset_right = 975.0
+offset_bottom = 543.0
+flat = true
+
+[node name="Northfield" type="Button" parent="TextureRect/Control/Panel"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 101.0
+offset_right = 372.0
+offset_bottom = 241.0
+flat = true
+
+[node name="Westfield" type="Button" parent="TextureRect/Control/Panel"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 392.0
+offset_right = 347.0
+offset_bottom = 532.0
+flat = true
+
+[node name="Eastfield" type="Button" parent="TextureRect/Control/Panel"]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 108.0
+offset_right = 985.0
+offset_bottom = 248.0
+flat = true

@@ -1,0 +1,392 @@
+[gd_scene load_steps=23 format=3 uid="uid://bbl4m378dp4qk"]
+
+[ext_resource type="Script" uid="uid://bfn3dqnobj8y1" path="res://Menu/menu.gd" id="1_2id2q"]
+[ext_resource type="Texture2D" uid="uid://3fm7fvrv5gc7" path="res://Menu/circle.png" id="3_7u1iq"]
+[ext_resource type="Texture2D" uid="uid://dr3occcd7fnbq" path="res://anim_bonfire/bonfire_animation1.png" id="3_10p45"]
+[ext_resource type="Texture2D" uid="uid://cri8ol2v5olie" path="res://anim_bonfire/bonfire_animation2.png" id="4_uhx8h"]
+[ext_resource type="Texture2D" uid="uid://xwnru75tlonv" path="res://anim_bonfire/bonfire_animation3.png" id="5_wwqfb"]
+[ext_resource type="Texture2D" uid="uid://d0u0t15ttxxkg" path="res://Menu/back_menu_2.jpeg" id="6_rd514"]
+[ext_resource type="Texture2D" uid="uid://d1klwm5nvkiae" path="res://anim_bonfire/bonfire_animation4.png" id="6_wqom6"]
+[ext_resource type="FontFile" uid="uid://sw7qdhg67g4v" path="res://tools/edf7f-eirik-raude.ttf" id="8_kcmws"]
+[ext_resource type="AudioStream" uid="uid://bbxorvbkfcy0r" path="res://tools/sound_button-2.ogg" id="12_t0w3q"]
+[ext_resource type="AudioStream" uid="uid://ben103xels7mp" path="res://menu_bonfire.ogg" id="14_140pf"]
+[ext_resource type="AudioStream" uid="uid://cim1lmogns62f" path="res://forest_sound.ogg" id="15_6cttq"]
+[ext_resource type="AudioStream" uid="uid://bg2oekh1kx8wj" path="res://Music_menu.ogg" id="16_cm34u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_85mkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wwqfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_10p45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uhx8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wqom6")
+}],
+"loop": true,
+"name": &"bonfire_1",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_mc6cb"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": ["Menu"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_du0m7"]
+resource_name = "MusicEnded"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Music_sound:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-4.5, -80.0]
+}
+
+[sub_resource type="Animation" id="Animation_v70io"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Light/PointLight2D:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animation_light/DirectionalLight2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Music_sound:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-4.5]
+}
+
+[sub_resource type="Animation" id="Animation_sli7n"]
+resource_name = "blackouy"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animation_light/DirectionalLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.7, 1.6]
+}
+
+[sub_resource type="Animation" id="Animation_oee4r"]
+length = 2.0
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_exokh"]
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["bonfire_1"]
+}
+
+[sub_resource type="Animation" id="Animation_s4xkm"]
+resource_name = "enlightenment"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animation_light/DirectionalLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.6, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_r342l"]
+resource_name = "pointed_light"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Light/PointLight2D:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.5, 1.5, 1.4, 1.35, 1.4, 1.5, 1.5, 1.6, 1.5, 1.4, 1.6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_82b3h"]
+_data = {
+&"Menu": SubResource("Animation_mc6cb"),
+&"MusicEnded": SubResource("Animation_du0m7"),
+&"RESET": SubResource("Animation_v70io"),
+&"blackouy": SubResource("Animation_sli7n"),
+&"bonfire": SubResource("Animation_oee4r"),
+&"bonfire_1": SubResource("Animation_exokh"),
+&"enlightenment": SubResource("Animation_s4xkm"),
+&"pointed_light": SubResource("Animation_r342l")
+}
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_2id2q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1042.5, 768)
+scale = Vector2(1.1275, 0.94)
+sprite_frames = SubResource("SpriteFrames_85mkm")
+animation = &"bonfire_1"
+
+[node name="BG_Menu" type="ParallaxBackground" parent="."]
+layer = -1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG_Menu"]
+
+[node name="Sprite2D" type="Sprite2D" parent="BG_Menu/ParallaxLayer"]
+position = Vector2(963, 541.5)
+scale = Vector2(0.488866, 0.506944)
+texture = ExtResource("6_rd514")
+
+[node name="Animation_light" type="Node2D" parent="."]
+
+[node name="Bonfire_light" type="AnimationPlayer" parent="Animation_light"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_82b3h")
+}
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Animation_light"]
+position = Vector2(2, 0)
+energy = 0.7
+blend_mode = 1
+range_z_max = 1025
+range_layer_min = -1
+range_layer_max = 1
+
+[node name="Light" type="Node2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+position = Vector2(1089, 807)
+scale = Vector2(0.707143, 0.475)
+color = Color(1, 0.509804, 0.431373, 1)
+energy = 1.14
+range_layer_min = -1
+texture = ExtResource("3_7u1iq")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 92.0
+offset_top = 145.0
+offset_right = 293.0
+offset_bottom = 496.0
+theme_override_constants/v_separation = 30
+
+[node name="Play" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_kcmws")
+theme_override_font_sizes/font_size = 35
+text = "Играть"
+flat = true
+
+[node name="Play" type="PointLight2D" parent="GridContainer/Play"]
+position = Vector2(58, 25)
+scale = Vector2(7, 1.225)
+range_layer_min = -1
+texture = ExtResource("3_7u1iq")
+texture_scale = 0.05
+
+[node name="Mission" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_kcmws")
+theme_override_font_sizes/font_size = 35
+button_mask = 5
+keep_pressed_outside = true
+text = "Миссии"
+flat = true
+
+[node name="PointLight2D" type="PointLight2D" parent="GridContainer/Mission"]
+position = Vector2(62.5, 24)
+scale = Vector2(0.37375, 0.0525)
+range_layer_min = -1
+texture = ExtResource("3_7u1iq")
+
+[node name="Quit" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_kcmws")
+theme_override_font_sizes/font_size = 35
+text = "Выйти"
+flat = true
+
+[node name="Quit" type="PointLight2D" parent="GridContainer/Quit"]
+position = Vector2(51, 24)
+scale = Vector2(7.1, 1.15)
+range_layer_min = -1
+texture = ExtResource("3_7u1iq")
+texture_scale = 0.05
+
+[node name="Bonfire_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_140pf")
+volume_db = -2.0
+autoplay = true
+
+[node name="Forest_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_6cttq")
+volume_db = -7.0
+autoplay = true
+
+[node name="Music_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_cm34u")
+volume_db = -4.5
+autoplay = true
+
+[node name="Sound_button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_t0w3q")
+volume_db = -10.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1925.0
+offset_bottom = 1079.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_right = 1930.0
+offset_bottom = 1085.0
+
+[node name="Button" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 1777.0
+offset_top = 12.0
+offset_right = 1906.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("8_kcmws")
+theme_override_font_sizes/font_size = 35
+button_mask = 5
+text = "Закрыть"
+flat = true
+
+[node name="PointLight2D2" type="PointLight2D" parent="Control/Panel/Button"]
+position = Vector2(68.9999, 29)
+scale = Vector2(0.21625, 0.045)
+texture = ExtResource("3_7u1iq")
+
+[node name="GridContainer" type="GridContainer" parent="Control/Panel"]
+layout_mode = 1
+offset_left = 66.0
+offset_top = 145.0
+offset_right = 452.0
+offset_bottom = 957.0
+theme_override_constants/v_separation = 20
+
+[node name="Prologue" type="Button" parent="Control/Panel/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_kcmws")
+theme_override_font_sizes/font_size = 35
+button_mask = 5
+text = " Пролог"
+flat = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Control/Panel/GridContainer/Prologue"]
+position = Vector2(84.0001, 23)
+scale = Vector2(0.21625, 0.045)
+texture = ExtResource("3_7u1iq")
+
+[node name="Birth" type="Button" parent="Control/Panel/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_kcmws")
+theme_override_font_sizes/font_size = 35
+button_mask = 5
+text = " Рождение"
+flat = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Control/Panel/GridContainer/Birth"]
+position = Vector2(77, 24)
+scale = Vector2(0.2375, 0.045)
+texture = ExtResource("3_7u1iq")
+
+[connection signal="pressed" from="GridContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="GridContainer/Mission" to="." method="_on_mission_pressed"]
+[connection signal="pressed" from="GridContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Panel/GridContainer/Prologue" to="." method="_on_prologue_pressed"]
+[connection signal="pressed" from="Control/Panel/GridContainer/Birth" to="." method="_on_birth_pressed"]

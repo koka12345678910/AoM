@@ -1,0 +1,143 @@
+[gd_scene load_steps=9 format=3 uid="uid://c045g00yup5k4"]
+
+[ext_resource type="PackedScene" uid="uid://cw0x2lmx7vigb" path="res://Level/corridor/сorridor.tscn" id="1_4e4rc"]
+[ext_resource type="Script" uid="uid://xxvijm2ut3qi" path="res://Level/corridor_2.gd" id="1_dhsbn"]
+[ext_resource type="PackedScene" uid="uid://dtx6p2pewcml4" path="res://Player/healers.tscn" id="2_lglm5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hoxq6"]
+radius = 147.34
+
+[sub_resource type="Animation" id="Animation_68y0e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Сorridor/DirectionalLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.65]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Сorridor/DirectionalLight2D:blend_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_mvo0m"]
+resource_name = "blackout"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Сorridor/DirectionalLight2D:blend_mode")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Сorridor/DirectionalLight2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.65, 2.0]
+}
+
+[sub_resource type="Animation" id="Animation_wai0o"]
+resource_name = "lightening"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Сorridor/DirectionalLight2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 0.65]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ct0d"]
+_data = {
+&"RESET": SubResource("Animation_68y0e"),
+&"blackout": SubResource("Animation_mvo0m"),
+&"lightening": SubResource("Animation_wai0o")
+}
+
+[node name="Corridor_2" type="Node2D"]
+script = ExtResource("1_dhsbn")
+
+[node name="Сorridor" parent="." instance=ExtResource("1_4e4rc")]
+
+[node name="DirectionalLight2D" parent="Сorridor" index="6"]
+energy = 0.65
+
+[node name="CollisionShape2D" parent="Сorridor/Area2D" index="0"]
+position = Vector2(-467, 267)
+
+[node name="Oldman" parent="Сorridor" index="10"]
+position = Vector2(2112, 780)
+
+[node name="CollisionShape2D" parent="Сorridor/Oldman" index="0"]
+position = Vector2(192, 104)
+
+[node name="AnimatedSprite2D" parent="Сorridor/Oldman" index="1"]
+position = Vector2(192, 104)
+
+[node name="Camera2D" parent="Сorridor/Oldman" index="2"]
+position = Vector2(186, 46)
+limit_top = 2
+
+[node name="PointLight2D" parent="Сorridor/Oldman" index="3"]
+position = Vector2(186, 45)
+
+[node name="Healers" parent="Сorridor" instance=ExtResource("2_lglm5")]
+position = Vector2(2464, 884)
+
+[node name="Healers2" parent="Сorridor/Healers" instance=ExtResource("2_lglm5")]
+position = Vector2(171, -3)
+
+[node name="AnimatedSprite2D" parent="Сorridor/Healers/Healers2" index="1"]
+position = Vector2(13.9999, -25.0625)
+scale = Vector2(0.54408, 0.52153)
+
+[node name="Healers3" parent="Сorridor/Healers" instance=ExtResource("2_lglm5")]
+position = Vector2(325, -3)
+
+[node name="Area2D3" type="Area2D" parent="Сorridor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Сorridor/Area2D3"]
+position = Vector2(-177, 881)
+shape = SubResource("CircleShape2D_hoxq6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8ct0d")
+}
+
+[connection signal="body_entered" from="Сorridor/Area2D3" to="." method="_on_area_2d_3_body_entered"]
+
+[editable path="Сorridor"]
+[editable path="Сorridor/Oldman"]
+[editable path="Сorridor/Healers/Healers2"]
