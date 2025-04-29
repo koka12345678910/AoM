@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxxxa2cwoiglw"
-path="res://.godot/imported/maps.png-4dd9fa499b5fd6478430a3dd46845c08.ctex"
+uid="uid://64aov47dqbwx"
+path="res://.godot/imported/dedok3.png-fe0a63c656b52780ebc2be7bdd98014a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tools/maps.png"
-dest_files=["res://.godot/imported/maps.png-4dd9fa499b5fd6478430a3dd46845c08.ctex"]
+source_file="res://dedok/dedok-idle/dedok3.png"
+dest_files=["res://.godot/imported/dedok3.png-fe0a63c656b52780ebc2be7bdd98014a.ctex"]
 
 [params]
 

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://xuxjw3i52ra4" path="res://Level/oldman.tscn" id="5_r73td"]
 [ext_resource type="Texture2D" uid="uid://5vqwngt44ch8" path="res://tools/walls_side_top.png" id="7_vc6fk"]
 [ext_resource type="AudioStream" uid="uid://d3kg4l20cfjq1" path="res://tools/sound_tourch.mp3" id="10_6mtuf"]
-[ext_resource type="AudioStream" uid="uid://b3g15ig5o0igr" path="res://KingCry-_1_.ogg" id="13_a6jds"]
+[ext_resource type="AudioStream" uid="uid://b3g15ig5o0igr" path="res://Sound/KingCry-_1_.ogg" id="13_a6jds"]
 [ext_resource type="Texture2D" uid="uid://3fm7fvrv5gc7" path="res://Menu/circle.png" id="14_0t33f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4sosp"]

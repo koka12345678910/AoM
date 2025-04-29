@@ -9,9 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://d1klwm5nvkiae" path="res://anim_bonfire/bonfire_animation4.png" id="6_wqom6"]
 [ext_resource type="FontFile" uid="uid://sw7qdhg67g4v" path="res://tools/edf7f-eirik-raude.ttf" id="8_kcmws"]
 [ext_resource type="AudioStream" uid="uid://bbxorvbkfcy0r" path="res://tools/sound_button-2.ogg" id="12_t0w3q"]
-[ext_resource type="AudioStream" uid="uid://ben103xels7mp" path="res://menu_bonfire.ogg" id="14_140pf"]
-[ext_resource type="AudioStream" uid="uid://cim1lmogns62f" path="res://forest_sound.ogg" id="15_6cttq"]
-[ext_resource type="AudioStream" uid="uid://bg2oekh1kx8wj" path="res://Music_menu.ogg" id="16_cm34u"]
+[ext_resource type="AudioStream" uid="uid://ben103xels7mp" path="res://Sound/menu_bonfire.ogg" id="14_140pf"]
+[ext_resource type="AudioStream" uid="uid://cim1lmogns62f" path="res://Sound/forest_sound.ogg" id="15_6cttq"]
+[ext_resource type="AudioStream" uid="uid://bg2oekh1kx8wj" path="res://Sound/Music_menu.ogg" id="16_cm34u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_85mkm"]
 animations = [{

@@ -1,10 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://cn8yaybtjmk6m"]
+[gd_scene load_steps=26 format=3 uid="uid://cn8yaybtjmk6m"]
 
-[ext_resource type="Script" uid="uid://bm40ucgps6i36" path="res://Room_w_artifact.gd" id="1_1abgx"]
+[ext_resource type="Script" uid="uid://bm40ucgps6i36" path="res://Level/Room_w_artifact.gd" id="1_1abgx"]
 [ext_resource type="Texture2D" uid="uid://blux8pkqottv8" path="res://tools/back-artifact.jpeg" id="2_owlfu"]
 [ext_resource type="Texture2D" uid="uid://c81xovobilgo6" path="res://tools/The Sidescroller's Dungeon - Tileset [32x32]/ZIP FILE/Torch Sprite Sheet 32x64.png" id="3_y00ud"]
 [ext_resource type="Texture2D" uid="uid://3fm7fvrv5gc7" path="res://Menu/circle.png" id="4_a18gl"]
-[ext_resource type="Texture2D" uid="uid://cvbdppwlirbkg" path="res://Menu alixan lox/MENU TT/Sprites87.png" id="5_gr7tf"]
 [ext_resource type="PackedScene" uid="uid://f4fcpo3npsnt" path="res://Level/artifact.tscn" id="6_h6351"]
 [ext_resource type="Texture2D" uid="uid://5vqwngt44ch8" path="res://tools/walls_side_top.png" id="6_v1r8d"]
 [ext_resource type="FontFile" uid="uid://sw7qdhg67g4v" path="res://tools/edf7f-eirik-raude.ttf" id="7_3oaxa"]
@@ -78,64 +77,6 @@ animations = [{
 "name": &"torch_light",
 "speed": 8.0
 }]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mklfg"]
-texture = ExtResource("5_gr7tf")
-4:1/0 = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:1/0 = 0
-5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:1/0 = 0
-6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:1/0 = 0
-7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-8:1/0 = 0
-8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-8:9/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-8:10/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hrf1g"]
 texture = ExtResource("6_v1r8d")
@@ -522,7 +463,6 @@ texture = ExtResource("6_v1r8d")
 
 [sub_resource type="TileSet" id="TileSet_o5bie"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_mklfg")
 sources/1 = SubResource("TileSetAtlasSource_hrf1g")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1tgo"]
@@ -674,7 +614,7 @@ limit_bottom = 50
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_2803v")
+&"": SubResource("AnimationLibrary_2803v")
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

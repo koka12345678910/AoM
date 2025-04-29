@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4d3tqjwxj6lp"]
 
-[ext_resource type="Script" uid="uid://cog0biaq51kc0" path="res://Meeting_2.gd" id="1_3vjj0"]
+[ext_resource type="Script" uid="uid://cog0biaq51kc0" path="res://Level/Meeting_2.gd" id="1_3vjj0"]
 [ext_resource type="PackedScene" uid="uid://dwwkq0m3ed6lt" path="res://Level/meeting.tscn" id="2_yivv2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_glpft"]

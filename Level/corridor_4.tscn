@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfoicpjpoldls"]
 
-[ext_resource type="Script" uid="uid://cx5ie7mof0d5l" path="res://Corridor_4.gd" id="1_cxg0x"]
+[ext_resource type="Script" uid="uid://cx5ie7mof0d5l" path="res://Level/Corridor_4.gd" id="1_cxg0x"]
 [ext_resource type="PackedScene" uid="uid://cw0x2lmx7vigb" path="res://Level/corridor/сorridor.tscn" id="2_mgbkg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_syyy5"]

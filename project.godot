@@ -17,9 +17,13 @@ boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/show_image=false
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://Sound/default_bus_layout.tres"
+
 [autoload]
 
-Global="*res://global.gd"
+Global="*res://Level/global.gd"
 
 [display]
 
